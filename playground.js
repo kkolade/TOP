@@ -3,13 +3,13 @@ function Book(title, author, numOfPages, isRead) {
   this.author = author;
   this.numOfPages = numOfPages;
   this.isRead = isRead;
-
-  this.info = function () {
-    return `${this.title} by ${this.author}, ${this.numOfPages} pages ${
-      this.isRead ? 'already read' : 'not read yet'
-    }`;
-  };
 }
+
+Book.prototype.info = function () {
+  return `${this.title} by ${this.author}, ${this.numOfPages} pages ${
+    this.isRead ? 'already read' : 'not read yet'
+  }`;
+};
 
 const goodTimes = new Book('Good Times', 'Leke Kolade', 296, false);
 
